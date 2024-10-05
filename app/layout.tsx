@@ -1,4 +1,6 @@
+
 import type { Metadata } from "next";
+
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -25,10 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script src="../components/qrcode.js" type="text/javascript"/>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
+       
+        <div className="flex flex-col items-center  gap-5" style={{width:"100vw",minWidth:"100vw",maxWidth:"100vw"}}>
         {children}
+        </div>
       </body>
     </html>
   );
