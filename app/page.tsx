@@ -1,6 +1,6 @@
 'use client'
 import { useState,useCallback } from "react";
-import {QRCodeSVG} from 'qrcode.react';
+import { QRCode } from 'react-qrcode-logo';
 import NavBtns from "@/components/controls";
 
 
@@ -13,7 +13,7 @@ export default function Home(){
           return (
             <div className="flex flex-col items-center">
               <a href={`${text}.png`} download={`${text}.png`}>
-              <QRCodeSVG value={inst} />
+              <QRCode value={inst}  />
               </a>
               <div className="text-center" style={{whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",width:"100px"}}>{inst}</div>
             </div>

@@ -1,6 +1,6 @@
 'use client'
 import { useState,useCallback } from "react";
-import {QRCodeCanvas, QRCodeSVG} from 'qrcode.react';
+import { QRCode } from 'react-qrcode-logo';
 import NavBtns from "@/components/controls";
 
 export default function Multi(){
@@ -24,8 +24,11 @@ export default function Multi(){
   function CodePrint({text}:any){
     return(
         <>
-         <a href={`${text}.png`} download={`${text}.png`}>
-         <QRCodeSVG value={text} level="H" size={128}/>
+         <a href={`${text}.png`} download={`${text}.svg`}>
+         
+         <QRCode value={text}  size={128}/>
+        
+         
          </a>
          <div className="flex flex-col gap-2 items-center">
          <div className="text-center" style={{whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",width:"100px"}}>{text}</div>
