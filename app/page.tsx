@@ -13,7 +13,7 @@ export default function Home(){
           return (
             <div className="flex flex-col items-center">
               <a href={`${text}.png`} download={`${text}.png`}>
-              <QRCode value={inst}  />
+              <QRCode fgColor="white" bgColor="black" value={inst}  />
               </a>
               <div className="text-center" style={{whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",width:"100px"}}>{inst}</div>
             </div>

@@ -26,7 +26,7 @@ export default function Multi(){
         <>
          <a href={`${text}.png`} download={`${text}.svg`}>
          
-         <QRCode value={text}  size={128}/>
+         <QRCode value={text} fgColor="white" bgColor="black" size={128}/>
         
          
          </a>
